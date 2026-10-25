@@ -11,3 +11,31 @@
 /* Personal playlist selector */
 .playlist-label{display:block;margin-top:17px;margin-bottom:6px;font-size:8px;letter-spacing:.18em;color:#858aa3}.track-select{width:min(100%,420px);padding:10px 12px;border:1px solid #303244;border-radius:2px;background:#11121a;color:#d8daea;font:11px "Be Vietnam Pro",sans-serif;outline:none}.track-select:focus{border-color:#898de0}.track-select:disabled{opacity:.65}.track-progress{cursor:pointer}.music-cover{background-position:center;background-size:cover}
 @media(max-width:700px){.playlist-label{margin-top:11px}.track-select{font-size:10px;padding:8px}.music-card{align-items:start}}
+
+/* Refined portfolio flow: About -> Skills -> Projects, with subtle scroll reveals */
+.topbar nav a{transition:color .2s ease}
+.reference-hero{border-radius:3px}
+.scroll-reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.75,.25,1)}
+.scroll-reveal.is-visible{opacity:1;transform:translateY(0)}
+#about .about-main,#skills.skills,.skills{border-radius:3px}
+#skills .skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:20px}
+#skills .skill{border:1px solid #292b3a;background:#101119;border-radius:3px;padding:16px;transition:border-color .2s,transform .2s}
+#skills .skill:hover{border-color:#777cae;transform:translateY(-2px)}
+#projects .project{border-radius:3px;background:#0d0e15;border-color:#2b2d3a;transition:transform .25s,border-color .25s}
+#projects .project:hover{transform:translateY(-4px);border-color:#7479ad}
+#projects .project-preview{border-radius:2px;background-color:#131520}
+#projects .project-status{letter-spacing:.13em}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.scroll-reveal{opacity:1;transform:none;transition:none}}
+
+
+/* Discord presence in the hero, inspired by clean profile landing pages */
+.hero-presence{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:24px 0 8px;color:var(--muted,#a5a8b7);font-size:.82rem;letter-spacing:.01em}
+.hero-presence strong{color:#e8e9f1;font-weight:600}
+.hero-presence-dot{width:8px;height:8px;display:inline-block;border-radius:50%;background:#858997;box-shadow:0 0 0 4px #85899722}
+.hero-presence-dot.online{background:#3bd883;box-shadow:0 0 0 4px #3bd88322}
+.hero-presence-dot.idle{background:#f0b84b;box-shadow:0 0 0 4px #f0b84b22}
+.hero-presence-dot.dnd{background:#f05b67;box-shadow:0 0 0 4px #f05b6722}
+.hero-presence-separator{opacity:.45}
+#heroAvatar img{border-radius:inherit}
+.skill-icon{min-width:44px;display:grid;place-items:center;font-size:.9rem;font-weight:700;letter-spacing:-.03em}
+@media(max-width:640px){.hero-presence{font-size:.75rem;gap:7px}}

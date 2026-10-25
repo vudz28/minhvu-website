@@ -45,6 +45,7 @@
     const name = user.global_name || user.display_name || user.username || cfg.displayName || "Đoàn Minh Vũ";
     $("discordName").textContent = name;
     $("discordHandle").textContent = user.username ? "@" + user.username : "Discord presence";
+    if ($("heroDiscordHandle")) $("heroDiscordHandle").textContent = user.username ? "@" + user.username : "DISCORD USER";
     if (user.id && user.avatar) {
       const ext = user.avatar.startsWith("a_") ? "gif" : "png";
       $("discordAvatar").src = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.${ext}?size=256`;
@@ -57,6 +58,10 @@
     }
     const status = p.discord_status || "offline";
     setStatus(status);
+    const heroStatus = $("heroStatusText");
+    const heroDot = $("heroPresenceDot");
+    if (heroStatus) heroStatus.textContent = statusMap[status] || "Chưa rõ trạng thái";
+    if (heroDot) heroDot.className = "hero-presence-dot " + (status === "online" ? "online" : status === "idle" ? "idle" : status === "dnd" ? "dnd" : "");
     const activities = Array.isArray(p.activities) ? p.activities : [];
     const visible = activities.filter(a => a.name && a.name !== "Custom Status");
     const custom = activities.find(a => a.type === 4 || a.name === "Custom Status");
@@ -91,13 +96,22 @@
       empty.textContent = status === "offline" ? "Hiện không có hoạt động công khai." : "Discord chưa chia sẻ hoạt động nào.";
       list.appendChild(empty);
     }
-    $("activityText").textContent = visible.length ? visible.map(a => a.name).join(", ") : (p.listening_to_spotify ? "Spotify" : "Không có hoạt động công khai");
+    const activitySummary = visible.length ? visible.map(a => a.name).join(", ") : (p.listening_to_spotify ? "Spotify" : "Không có hoạt động công khai");
+    $("activityText").textContent = activitySummary;
+    if ($("heroActivityText")) {
+      const firstActivity = visible[0];
+      const summary = p.listening_to_spotify && p.spotify ? `Nghe Spotify: ${p.spotify.song}` : (firstActivity ? (firstActivity.details || firstActivity.name) : (custom ? (custom.state || "Custom status") : "Không có hoạt động công khai"));
+      $("heroActivityText").textContent = summary;
+    }
     $("lastUpdated").textContent = "Cập nhật: " + new Date().toLocaleTimeString("vi-VN", {hour:"2-digit", minute:"2-digit", second:"2-digit"});
     setConnection("CONNECTED");
   }
   function showSetupMessage() {
     setConnection("NOT CONFIGURED");
     $("discordHandle").textContent = "Cần Discord User ID để đồng bộ";
+    if ($("heroDiscordHandle")) $("heroDiscordHandle").textContent = "@DISCORD-USER";
+    if ($("heroStatusText")) $("heroStatusText").textContent = "Chưa kết nối Discord";
+    if ($("heroActivityText")) $("heroActivityText").textContent = "Thêm Discord ID để hiển thị hoạt động";
     $("activityList").innerHTML = '<div class="activity-placeholder">Mở file <b>config.js</b>, điền Discord User ID. Sau đó tham gia máy chủ Lanyard để cho phép chia sẻ presence.</div>';
     $("lastUpdated").textContent = "Chưa thiết lập";
   }
@@ -268,3 +282,19 @@
     if (socket) socket.close();
   });
 })();
+
+  // Subtle section reveal when scrolling down the portfolio.
+  const revealSections = document.querySelectorAll('.scroll-reveal');
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -35px 0px' });
+    revealSections.forEach((section) => revealObserver.observe(section));
+  } else {
+    revealSections.forEach((section) => section.classList.add('is-visible'));
+  }

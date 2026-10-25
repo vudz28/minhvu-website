@@ -1,128 +1,119 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b16">
-  <meta name="description" content="Gaming profile and personal portfolio của Đoàn Minh Vũ.">
-  <title>Minh Vũ — Personal Space</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#070b16" name="theme-color"/>
+<meta content="Trang cá nhân của Đoàn Minh Vũ với avatar Discord, trạng thái trực tuyến, hoạt động và kỹ năng backend." name="description"/>
+<title>Minh Vũ — Personal Space</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <div class="intro-screen" id="introScreen">
-    <div class="intro-noise"></div>
-    <div class="intro-content">
-      <span class="intro-kicker">PERSONAL WEBSITE / 2026</span>
-      <div class="intro-monogram">MV<span>.</span></div>
-      <p class="intro-jp">自分を変えてみてください</p>
-      <p class="intro-caption">A LITTLE SPACE ON THE INTERNET</p>
-      <button class="intro-button" id="enterSite">CLICK TO START <span>↗</span></button>
-    </div>
-    <span class="intro-corner intro-left">MINH VU © 2026</span><span class="intro-corner intro-right">SCROLL TO EXPLORE ↓</span>
-  </div>
-  <header class="topbar wrap">
-    <a class="brand" href="#home"><span class="brand-mark">MV.</span><span>MINH VŨ<span class="brand-sub">PERSONAL SPACE</span></span></a>
-    <nav><a href="#home">Home</a><a href="#discord">Discord</a><a href="#music">Now Playing</a><a href="#sites">My Sites</a></nav>
-    <button class="sound-toggle" id="soundToggle" aria-label="Bật hoặc tắt nhạc">♫ <span>PLAYER</span></button>
-  </header>
-  <main class="wrap">
-    <section class="reference-hero" id="home">
-      <div class="hero-background-grid"></div>
-      <div class="reference-hero-copy">
-        <span class="intro-kicker">WELCOME TO MY SPACE</span>
-        <h1 class="reference-title">自分を変えて<br><span>みてください</span><i>_</i></h1>
-        <p class="reference-subtitle">ĐOÀN MINH VŨ <span> / </span> @MINHVU</p>
-        <p class="reference-description">Một góc nhỏ của mình trên internet — game, âm nhạc, công nghệ và những điều mình yêu thích.</p>
-        <a href="#discord" class="scroll-link">SCROLL TO EXPLORE <span>↓</span></a>
-      </div>
-      <div class="reference-hero-art">
-        <div class="portrait-ring ring-one"></div><div class="portrait-ring ring-two"></div>
-        <div class="portrait-placeholder" id="heroAvatar"><span>MV</span></div>
-        <span class="portrait-label label-top">ONLINE / OFFLINE</span><span class="portrait-label label-bottom">EST. 2026</span>
-      </div>
-    </section>
+<div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+<div class="intro-screen" id="introScreen">
+<div class="intro-noise"></div>
+<div class="intro-content">
+<span class="intro-kicker">PERSONAL WEBSITE / 2026</span>
+<div class="intro-monogram">MV<span>.</span></div>
+<p class="intro-jp">自分を変えてみてください</p>
+<p class="intro-caption">A LITTLE SPACE ON THE INTERNET</p>
+<button class="intro-button" id="enterSite">CLICK TO START <span>↗</span></button>
+</div>
+<span class="intro-corner intro-left">MINH VU © 2026</span><span class="intro-corner intro-right">SCROLL TO EXPLORE ↓</span>
+</div>
+<header class="topbar wrap">
+<a class="brand" href="#home"><span class="brand-mark">MV.</span><span>MINH VŨ<span class="brand-sub">PERSONAL SPACE</span></span></a>
+<nav><a href="#discord">Discord</a><a href="#about">About me</a><a href="#skills">My skill</a><a href="#music">Music</a><a href="#games">Games</a><a href="#contact">Contact</a></nav>
+<button aria-label="Bật hoặc tắt nhạc" class="sound-toggle" id="soundToggle">♫ <span>PLAYER</span></button>
+</header>
+<main class="wrap">
 
-    <section class="section" id="discord">
-      <div class="section-heading"><div><span class="section-kicker">LIVE INTEGRATION</span><h2>Discord <span>Profile</span></h2></div><span class="live-label"><span class="pulse"></span> LIVE STATUS</span></div>
-      <div class="discord-card panel">
-        <div class="discord-banner"><div class="banner-grid"></div><span class="banner-label">PLAYER PROFILE / 001</span></div>
-        <div class="discord-content">
-          <div class="discord-avatar-wrap"><img id="discordAvatar" src="assets/avatar-placeholder.svg" alt="Discord avatar"><span id="statusDot" class="status-dot status-unknown"></span></div>
-          <div class="discord-info">
-            <div class="discord-name-row"><h3 id="discordName">Đoàn Minh Vũ</h3><span class="discord-badge">✦ MEMBER</span></div>
-            <p class="discord-handle" id="discordHandle">Thiết lập Discord ID để đồng bộ hồ sơ</p>
-            <div class="status-line"><span id="statusText">Chưa kết nối</span><span class="separator">/</span><span id="activityText">Chưa có dữ liệu hoạt động</span></div>
-            <div id="activityList" class="activity-list"><div class="activity-placeholder">Sau khi thiết lập Discord ID và tham gia Lanyard, trạng thái sẽ xuất hiện tại đây.</div></div>
-          </div>
-          <aside class="discord-side"><span class="side-label">CONNECTION</span><strong id="connectionState">NOT CONFIGURED</strong><p id="lastUpdated">Đang chờ cấu hình</p><a id="discordProfileLink" class="button secondary small" href="https://discord.com/app" target="_blank" rel="noreferrer">Mở Discord ↗</a></aside>
-        </div>
-      </div>
-      <p class="note">Trạng thái Discord chỉ hiển thị khi bạn đã tham gia dịch vụ Lanyard và dữ liệu hoạt động được chia sẻ. Website không yêu cầu mật khẩu hoặc token Discord.</p>
-    </section>
 
-    <section class="section" id="music">
-      <div class="section-heading"><div><span class="section-kicker">A SOUNDTRACK FOR THIS PAGE</span><h2>Now <span>Playing</span></h2></div><span class="section-number">01 / MUSIC</span></div>
-      <div class="music-card panel">
-        <div class="music-cover" id="musicCover"><span>♪</span><small>MV MUSIC PLAYER</small></div>
-        <div class="music-meta"><span class="music-overline">CURRENT TRACK</span><h3 id="trackTitle">Chưa chọn bài nhạc</h3><p id="trackArtist">Thêm đường dẫn nhạc trong config.js</p><div class="track-progress"><span id="trackProgress"></span></div><div class="track-time"><span id="currentTime">00:00</span><span id="duration">00:00</span></div>
-          <div class="player-controls"><button id="prevTrack" aria-label="Bài trước">|◀</button><button id="playTrack" class="play-button" aria-label="Phát nhạc">▶</button><button id="nextTrack" aria-label="Bài tiếp theo">▶|</button><button id="muteTrack" aria-label="Tắt tiếng">♫</button></div><label class="playlist-label" for="trackSelect">CHỌN BÀI NHẠC</label><select id="trackSelect" class="track-select" aria-label="Chọn bài nhạc"><option value="">Chưa có danh sách nhạc</option></select>
-        </div>
-      </div>
-      <p class="note">Trình phát dùng đường dẫn âm thanh do bạn cấu hình. Chỉ sử dụng nhạc bạn có quyền phát/chia sẻ.</p>
-    </section>
 
-    <section class="section" id="sites">
-      <div class="section-heading"><div><span class="section-kicker">ELSEWHERE ON THE INTERNET</span><h2>My <span>Sites</span></h2></div><span class="section-number">02 / LINKS</span></div>
-      <div class="sites-grid">
-        <a class="site-card panel" id="siteOne" href="https://github.com/" target="_blank" rel="noreferrer"><span class="site-symbol">⌘</span><span class="site-text"><strong>GitHub</strong><small>Projects & code</small></span><span class="site-arrow">↗</span></a>
-        <a class="site-card panel" id="siteTwo" href="https://discord.com/app" target="_blank" rel="noreferrer"><span class="site-symbol">◈</span><span class="site-text"><strong>Discord</strong><small>Find me online</small></span><span class="site-arrow">↗</span></a>
-        <a class="site-card panel" id="siteThree" href="https://facebook.com/" target="_blank" rel="noreferrer"><span class="site-symbol">f</span><span class="site-text"><strong>Facebook</strong><small>Social profile</small></span><span class="site-arrow">↗</span></a>
-      </div>
-    </section>
 
-    <section class="section" id="about">
-      <div class="section-heading"><div><span class="section-kicker">WHO AM I?</span><h2>Giới thiệu <span>bản thân</span></h2></div><span class="section-number">01 / ABOUT</span></div>
-      <div class="about-grid">
-        <article class="panel about-main"><div class="card-icon">✧</div><h3>Một chút về mình</h3><p>Mình là Đoàn Minh Vũ, sinh viên FPT Polytechnic. Mình thích tìm hiểu công nghệ, xây dựng website và thử nghiệm những ý tưởng mới. Ngoài giờ học, mình thường chơi game, nghe nhạc và khám phá các công cụ sáng tạo.</p><div class="chips"><span>🎓 FPT Polytechnic</span><span>💻 Web & Tech</span><span>🎮 Gaming</span></div></article>
-        <article class="panel quote-card"><span class="quote-mark">“</span><p>Không cần hoàn hảo ngay từ đầu. Chỉ cần mỗi ngày tiến bộ hơn một chút.</p><span class="quote-sign">— Minh Vũ</span><div class="quote-glow"></div></article>
-      </div>
-    </section>
 
-    <section class="section" id="games">
-      <div class="section-heading"><div><span class="section-kicker">PRESS START</span><h2>Game <span>yêu thích</span></h2></div><span class="section-number">02 / GAMES</span></div>
-      <div class="games-grid">
-        <article class="game-card game-minecraft"><div class="game-art">▦</div><div><h3>Minecraft</h3><p>Build • Explore • Survival</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-freefire"><div class="game-art">✦</div><div><h3>Free Fire</h3><p>Battle Royale</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-lienquan"><div class="game-art">⚔</div><div><h3>Liên Quân</h3><p>MOBA • Teamwork</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-roblox"><div class="game-art">◇</div><div><h3>Roblox</h3><p>Play • Create</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-valorant"><div class="game-art">⌁</div><div><h3>Valorant</h3><p>Tactical FPS</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-gta"><div class="game-art">▰</div><div><h3>GTA V</h3><p>Open World</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-genshin"><div class="game-art">✧</div><div><h3>Genshin Impact</h3><p>Adventure • RPG</p></div><span class="game-arrow">↗</span></article>
-        <article class="game-card game-playtogether"><div class="game-art">☻</div><div><h3>Play Together</h3><p>Casual • Friends</p></div><span class="game-arrow">↗</span></article>
-      </div>
-    </section>
 
-    <section class="section" id="skills">
-      <div class="section-heading"><div><span class="section-kicker">LOADOUT</span><h2>Kỹ năng <span>của mình</span></h2></div><span class="section-number">03 / SKILLS</span></div>
-      <div class="skills panel"><div class="skill"><span class="skill-icon html">5</span><div><strong>HTML</strong><small>Web structure</small></div><span class="skill-level">ĐANG HỌC</span></div><div class="skill"><span class="skill-icon css">✳</span><div><strong>CSS</strong><small>UI & styling</small></div><span class="skill-level">ĐANG HỌC</span></div><div class="skill"><span class="skill-icon js">JS</span><div><strong>JavaScript</strong><small>Interaction</small></div><span class="skill-level">ĐANG HỌC</span></div><div class="skill"><span class="skill-icon py">Py</span><div><strong>Python</strong><small>Automation & logic</small></div><span class="skill-level">CƠ BẢN</span></div></div>
-    </section>
 
-    <section class="section" id="projects">
-      <div class="section-heading"><div><span class="section-kicker">BUILD LOG</span><h2>Dự án <span>nổi bật</span></h2></div><span class="section-number">04 / PROJECTS</span></div>
-      <div class="projects-grid"><article class="project panel"><div class="project-top"><span>01</span><span class="project-status">PERSONAL</span></div><div class="project-preview preview-one"><span>MV</span><div>MY DIGITAL SPACE</div></div><h3>Personal Gaming Profile</h3><p>Website cá nhân với hồ sơ Discord và các mục game yêu thích.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article><article class="project panel"><div class="project-top"><span>02</span><span class="project-status">IN PROGRESS</span></div><div class="project-preview preview-two"><span>⌘</span><div>IDEAS → REALITY</div></div><h3>Web Experiments</h3><p>Nơi thử nghiệm giao diện, hiệu ứng và những ý tưởng mới.</p><div class="chips"><span>UI Design</span><span>Frontend</span></div></article><article class="project panel"><div class="project-top"><span>03</span><span class="project-status">COMING SOON</span></div><div class="project-preview preview-three"><span>✦</span><div>LEVEL UP</div></div><h3>Next Project</h3><p>Một dự án mới đang được lên ý tưởng. Hẹn gặp ở bản cập nhật tiếp theo.</p><div class="chips"><span>Learning</span><span>Building</span></div></article></div>
-    </section>
 
-    <section class="section contact-section" id="contact">
-      <div class="contact-copy"><span class="section-kicker">LET'S CONNECT</span><h2>Kết nối <span>với mình.</span></h2><p>Có game hay, ý tưởng thú vị hoặc muốn trao đổi về công nghệ? Tìm mình qua các liên kết bên dưới nhé.</p></div>
-      <div class="contact-links"><a href="#" data-link="discord"><span>◈</span><div><strong>Discord</strong><small id="contactDiscord">Thêm Discord ID trong config.js</small></div><b>↗</b></a><a href="#" data-link="github"><span>⌘</span><div><strong>GitHub</strong><small>Projects & code</small></div><b>↗</b></a><a href="#" data-link="facebook"><span>f</span><div><strong>Facebook</strong><small>Social profile</small></div><b>↗</b></a></div>
-    </section>
-    <footer class="footer"><a class="brand" href="#home"><span class="brand-mark">MV</span><span>MINH VŨ<span class="brand-sub">MADE WITH CURIOSITY</span></span></a><span>© <span id="year"></span> Đoàn Minh Vũ. Made with care.</span><a href="#home">BACK TO TOP ↑</a></footer>
-  </main>
-  <script src="config.js"></script>
-  <script src="script.js"></script>
+
+<section class="reference-hero" id="home">
+<div class="hero-background-grid"></div>
+<div class="reference-hero-copy">
+<span class="intro-kicker">WELCOME TO MY SPACE</span>
+<h1 class="reference-title">自分を変えて<br/><span>みてください</span><i>_</i></h1>
+<p class="reference-subtitle">ĐOÀN MINH VŨ <span> / </span> <span id="heroDiscordHandle">@MINHVU</span></p>
+<p class="reference-description">Sinh viên FPT Polytechnic, yêu thích backend, công nghệ, game và âm nhạc. Chào mừng bạn đến với góc nhỏ của mình trên Internet.</p>
+<div class="hero-presence"><span class="hero-presence-dot" id="heroPresenceDot"></span><strong id="heroStatusText">Đang kết nối Discord...</strong><span class="hero-presence-separator">/</span><span id="heroActivityText">Đang tải hoạt động</span></div>
+<a class="scroll-link" href="#about">SCROLL TO EXPLORE <span>↓</span></a>
+</div>
+<div class="reference-hero-art">
+<div class="portrait-ring ring-one"></div><div class="portrait-ring ring-two"></div>
+<div class="portrait-placeholder" id="heroAvatar"><span>MV</span></div>
+<span class="portrait-label label-top">ONLINE / OFFLINE</span><span class="portrait-label label-bottom">EST. 2026</span>
+</div>
+</section><section class="section scroll-reveal" id="discord">
+<div class="section-heading"><div><span class="section-kicker">LIVE INTEGRATION</span><h2>Discord <span>Profile</span></h2></div><span class="live-label"><span class="pulse"></span> LIVE STATUS</span></div>
+<div class="discord-card panel">
+<div class="discord-banner"><div class="banner-grid"></div><span class="banner-label">PLAYER PROFILE / 001</span></div>
+<div class="discord-content">
+<div class="discord-avatar-wrap"><img alt="Discord avatar" id="discordAvatar" src="assets/avatar-placeholder.svg"/><span class="status-dot status-unknown" id="statusDot"></span></div>
+<div class="discord-info">
+<div class="discord-name-row"><h3 id="discordName">Đoàn Minh Vũ</h3><span class="discord-badge">✦ MEMBER</span></div>
+<p class="discord-handle" id="discordHandle">Thiết lập Discord ID để đồng bộ hồ sơ</p>
+<div class="status-line"><span id="statusText">Chưa kết nối</span><span class="separator">/</span><span id="activityText">Chưa có dữ liệu hoạt động</span></div>
+<div class="activity-list" id="activityList"><div class="activity-placeholder">Sau khi thiết lập Discord ID và tham gia Lanyard, trạng thái sẽ xuất hiện tại đây.</div></div>
+</div>
+<aside class="discord-side"><span class="side-label">CONNECTION</span><strong id="connectionState">NOT CONFIGURED</strong><p id="lastUpdated">Đang chờ cấu hình</p><a class="button secondary small" href="https://discord.com/app" id="discordProfileLink" rel="noreferrer" target="_blank">Mở Discord ↗</a></aside>
+</div>
+</div>
+<p class="note">Trạng thái Discord chỉ hiển thị khi bạn đã tham gia dịch vụ Lanyard và dữ liệu hoạt động được chia sẻ. Website không yêu cầu mật khẩu hoặc token Discord.</p>
+</section><section class="section scroll-reveal" id="about">
+<div class="section-heading"><div><span class="section-kicker">A LITTLE INTRODUCTION</span><h2>Giới thiệu <span>bản thân</span></h2></div><span class="section-number">01 / ABOUT</span></div>
+<div class="about-grid">
+<article class="panel about-main"><div class="card-icon">✧</div><h3>Một chút về mình</h3><p>Mình là Đoàn Minh Vũ, sinh viên FPT Polytechnic. Mình đang học cách biến ý tưởng thành sản phẩm số — từ giao diện website, những thử nghiệm JavaScript đến các công cụ nhỏ phục vụ học tập và giải trí. Ngoài lập trình, mình thích chơi game, nghe nhạc và khám phá công nghệ mới.</p><div class="chips"><span>🎓 FPT Polytechnic</span><span>💻 Web &amp; Tech</span><span>🎮 Gaming</span></div></article>
+<article class="panel quote-card"><span class="quote-mark">“</span><p>Không cần hoàn hảo ngay từ đầu. Chỉ cần mỗi ngày tiến bộ hơn một chút.</p><span class="quote-sign">— Minh Vũ</span><div class="quote-glow"></div></article>
+</div>
+</section><section class="section scroll-reveal" id="skills">
+<div class="section-heading"><div><span class="section-kicker">WHAT I AM LEARNING</span><h2>My <span>Skills</span></h2></div><span class="section-number">02 / BACKEND</span></div>
+<div class="skills panel"><div class="skill"><span class="skill-icon py">Py</span><div><strong>Python</strong><small>Backend logic &amp; scripting</small></div><span class="skill-level">ĐANG HỌC</span></div><div class="skill"><span class="skill-icon js">JS</span><div><strong>Node.js</strong><small>Server-side JavaScript</small></div><span class="skill-level">ĐANG HỌC</span></div><div class="skill"><span class="skill-icon html">API</span><div><strong>REST API</strong><small>Routes, requests &amp; responses</small></div><span class="skill-level">ĐANG TÌM HIỂU</span></div><div class="skill"><span class="skill-icon css">DB</span><div><strong>Database</strong><small>Data modeling &amp; queries</small></div><span class="skill-level">ĐANG TÌM HIỂU</span></div></div>
+</section><section class="section scroll-reveal" id="music">
+<div class="section-heading"><div><span class="section-kicker">A SOUNDTRACK FOR THIS PAGE</span><h2>Now <span>Playing</span></h2></div><span class="section-number">01 / MUSIC</span></div>
+<div class="music-card panel">
+<div class="music-cover" id="musicCover"><span>♪</span><small>MV MUSIC PLAYER</small></div>
+<div class="music-meta"><span class="music-overline">CURRENT TRACK</span><h3 id="trackTitle">Chưa chọn bài nhạc</h3><p id="trackArtist">Thêm đường dẫn nhạc trong config.js</p><div class="track-progress"><span id="trackProgress"></span></div><div class="track-time"><span id="currentTime">00:00</span><span id="duration">00:00</span></div>
+<div class="player-controls"><button aria-label="Bài trước" id="prevTrack">|◀</button><button aria-label="Phát nhạc" class="play-button" id="playTrack">▶</button><button aria-label="Bài tiếp theo" id="nextTrack">▶|</button><button aria-label="Tắt tiếng" id="muteTrack">♫</button></div><label class="playlist-label" for="trackSelect">CHỌN BÀI NHẠC</label><select aria-label="Chọn bài nhạc" class="track-select" id="trackSelect"><option value="">Chưa có danh sách nhạc</option></select>
+</div>
+</div>
+<p class="note">Trình phát dùng đường dẫn âm thanh do bạn cấu hình. Chỉ sử dụng nhạc bạn có quyền phát/chia sẻ.</p>
+</section><section class="section scroll-reveal" id="games">
+<div class="section-heading"><div><span class="section-kicker">PRESS START</span><h2>Game <span>yêu thích</span></h2></div><span class="section-number">02 / GAMES</span></div>
+<div class="games-grid">
+<article class="game-card game-minecraft"><div class="game-art">▦</div><div><h3>Minecraft</h3><p>Build • Explore • Survival</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-freefire"><div class="game-art">✦</div><div><h3>Free Fire</h3><p>Battle Royale</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-lienquan"><div class="game-art">⚔</div><div><h3>Liên Quân</h3><p>MOBA • Teamwork</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-roblox"><div class="game-art">◇</div><div><h3>Roblox</h3><p>Play • Create</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-valorant"><div class="game-art">⌁</div><div><h3>Valorant</h3><p>Tactical FPS</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-gta"><div class="game-art">▰</div><div><h3>GTA V</h3><p>Open World</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-genshin"><div class="game-art">✧</div><div><h3>Genshin Impact</h3><p>Adventure • RPG</p></div><span class="game-arrow">↗</span></article>
+<article class="game-card game-playtogether"><div class="game-art">☻</div><div><h3>Play Together</h3><p>Casual • Friends</p></div><span class="game-arrow">↗</span></article>
+</div>
+</section><section class="section scroll-reveal" id="sites">
+<div class="section-heading"><div><span class="section-kicker">ELSEWHERE ON THE INTERNET</span><h2>My <span>Sites</span></h2></div><span class="section-number">02 / LINKS</span></div>
+<div class="sites-grid">
+<a class="site-card panel" href="https://github.com/" id="siteOne" rel="noreferrer" target="_blank"><span class="site-symbol">⌘</span><span class="site-text"><strong>GitHub</strong><small>Projects &amp; code</small></span><span class="site-arrow">↗</span></a>
+<a class="site-card panel" href="https://discord.com/app" id="siteTwo" rel="noreferrer" target="_blank"><span class="site-symbol">◈</span><span class="site-text"><strong>Discord</strong><small>Find me online</small></span><span class="site-arrow">↗</span></a>
+<a class="site-card panel" href="https://facebook.com/" id="siteThree" rel="noreferrer" target="_blank"><span class="site-symbol">f</span><span class="site-text"><strong>Facebook</strong><small>Social profile</small></span><span class="site-arrow">↗</span></a>
+</div>
+</section><section class="section contact-section scroll-reveal" id="contact">
+<div class="contact-copy"><span class="section-kicker">LET'S CONNECT</span><h2>Kết nối <span>với mình.</span></h2><p>Có game hay, ý tưởng thú vị hoặc muốn trao đổi về công nghệ? Tìm mình qua các liên kết bên dưới nhé.</p></div>
+<div class="contact-links"><a data-link="discord" href="#"><span>◈</span><div><strong>Discord</strong><small id="contactDiscord">Thêm Discord ID trong config.js</small></div><b>↗</b></a><a data-link="github" href="#"><span>⌘</span><div><strong>GitHub</strong><small>Projects &amp; code</small></div><b>↗</b></a><a data-link="facebook" href="#"><span>f</span><div><strong>Facebook</strong><small>Social profile</small></div><b>↗</b></a></div>
+</section><footer class="footer"><a class="brand" href="#home"><span class="brand-mark">MV</span><span>MINH VŨ<span class="brand-sub">MADE WITH CURIOSITY</span></span></a><span>© <span id="year"></span> Đoàn Minh Vũ. Made with care.</span><a href="#home">BACK TO TOP ↑</a></footer>
+</main>
+<script src="config.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
